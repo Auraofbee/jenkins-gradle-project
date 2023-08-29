@@ -1,1 +1,1 @@
-# jenkins-gradle-project
+# jenkins-master-client-project
