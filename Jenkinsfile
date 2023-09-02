@@ -1,4 +1,4 @@
-epipeline {
+pipeline {
   agent {
     label 'Maven-Build-Env' // Use the Maven slave node for this pipeline
   }
