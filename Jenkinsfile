@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 def COLOR_MAP = [
 
     'SUCCESS': 'good', 
@@ -7,6 +8,8 @@ def COLOR_MAP = [
     'UNSTABLE': 'danger'
 
 ]
+=======
+>>>>>>> 987224863605c79095065ea7918f143fff82717a
 pipeline {
   agent {
     label 'Maven-Build-Env' // Use the Maven slave node for this pipeline
@@ -40,7 +43,7 @@ pipeline {
     stage('SonarQube Inspection') {
         steps {
             sh  """mvn sonar:sonar \
-                   -Dsonar.projectKey=Maven-JavaWebApp \
+                   -Dsonar.projectKey=maven-java-webapp \
                    -Dsonar.host.url=http://172.31.31.199:9000 \
                    -Dsonar.login=15e92bac1f1b554181c4d1fbab4bb5be6278fd92"""
         }
