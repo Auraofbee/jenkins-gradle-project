@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 def COLOR_MAP = [
 
     'SUCCESS': 'good', 
