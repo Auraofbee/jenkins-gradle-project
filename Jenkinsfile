@@ -48,7 +48,7 @@ pipeline {
         }
     }
     stage("Upload Artifact To Nexus"){
-        steps{
+        steps {
             sh 'gradle publish'
         }
         post {
