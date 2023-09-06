@@ -12,10 +12,6 @@ pipeline {
   agent {
     label 'Gradle-Build-Env' // Use the Gradle slave node for this pipeline
       
-pipeline {
-  agent {
-    label 'Maven-Build-Env' // Use the Maven slave node for this pipeline
-  }
   stages {
     stage('Validate Project') {
         steps {
@@ -106,4 +102,4 @@ pipeline {
     }
 }
   }
-}
+
