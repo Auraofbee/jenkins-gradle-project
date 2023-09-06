@@ -1,36 +1,36 @@
-#!/bin/bash
+# #!/bin/bash
 
-# Update package lists
-sudo apt upgrade -y
+# # Update package lists
+# sudo apt upgrade -y
 
-# Install Java (required for Jenkins and Gradle)
-sudo apt install -y openjdk-11-jdk
+# # Install Java (required for Jenkins and Gradle)
+# sudo apt install -y openjdk-11-jdk
 
-# Download and install Gradle
-wget https://services.gradle.org/distributions/gradle-7.2-bin.zip
-sudo mkdir /opt/gradle
-sudo unzip -d /opt/gradle gradle-7.2-bin.zip
-export PATH=$PATH:/opt/gradle/gradle-7.2/bin
+# # Download and install Gradle
+# wget https://services.gradle.org/distributions/gradle-7.2-bin.zip
+# sudo mkdir /opt/gradle
+# sudo unzip -d /opt/gradle gradle-7.2-bin.zip
+# export PATH=$PATH:/opt/gradle/gradle-7.2/bin
 
-# Install Jenkins
-wget -q -O - https://pkg.jenkins.io/debian/jenkins.io.key | sudo apt-key add -
-sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
-sudo apt update
-sudo apt upgrade -y
-sudo apt install -y jenkins
+# # Install Jenkins
+# wget -q -O - https://pkg.jenkins.io/debian/jenkins.io.key | sudo apt-key add -
+# sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+# sudo apt update
+# sudo apt upgrade -y
+# sudo apt install -y jenkins
 
-echo "jenkins ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
-sudo systemctl enable jenkins
-# Start Jenkins service
-sudo systemctl start jenkins
+# echo "jenkins ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
+# sudo systemctl enable jenkins
+# # Start Jenkins service
+# sudo systemctl start jenkins
 
 
-# Inform the user about the next steps
-echo "Jenkins has been installed. Please copy the above initial admin password."
-echo "Open your browser and navigate to http://your-server-ip:8080"
-echo "Follow the on-screen instructions to complete the Jenkins setup."
+# # Inform the user about the next steps
+# echo "Jenkins has been installed. Please copy the above initial admin password."
+# echo "Open your browser and navigate to http://your-server-ip:8080"
+# echo "Follow the on-screen instructions to complete the Jenkins setup."
 
-# Installing Git
-yum install git -y
+# # Installing Git
+# yum install git -y
 
 
